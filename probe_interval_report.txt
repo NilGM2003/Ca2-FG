@@ -1,0 +1,57 @@
+AFG1022 interval hunt, 2026-10-08 12:57:10
+*IDN? -> TEKTRONIX,AFG1022,2347497,SCPI:99.0 FV:V1.3.0
+
+--- setup ---
+*CLS                                          ok
+OUTPut1:STATe OFF                             ok
+OUTPut2:STATe OFF                             ok
+SOURce1:FUNCtion:SHAPe SINusoid               ok
+SOURce1:FREQuency:FIXed 500000                ok
+SOURce1:BURSt:MODE TRIGgered                  ok
+SOURce1:BURSt:NCYCles 250                     ok
+SOURce1:BURSt:SOURce TIMer                    ok
+SOURce1:BURSt:STATe ON                        ok
+SOURce1:BURSt:SOURce?  ->  TIM
+
+--- candidates (value 0.25 s) ---
+rejected  SOURce1:BURSt:INTerval
+rejected  SOURce1:BURSt:TINTerval
+rejected  SOURce1:BURSt:INTernal:INTerval
+rejected  SOURce1:BURSt:INTernal:PERiod
+rejected  SOURce1:BURSt:INTernal:RATE
+rejected  SOURce1:BURSt:INTernal:TIMer
+rejected  SOURce1:BURSt:PERiod
+rejected  SOURce1:BURSt:TIMer
+rejected  SOURce1:BURSt:RATE
+rejected  SOURce1:BURSt:DELay
+rejected  SOURce1:BURSt:TDELay
+rejected  SOURce1:BURSt:TRIGger:INTerval
+rejected  SOURce1:BURSt:TRIGger:PERiod
+rejected  SOURce1:BURSt:TRIGger:TIMer
+rejected  SOURce1:BURSt:TIMer:PERiod
+rejected  SOURce1:BURSt:TIMer:INTerval
+rejected  TRIGger:INTerval
+rejected  TRIGger:PERiod
+rejected  TRIGger:TIMer
+rejected  TRIGger:RATE
+rejected  TRIGger:INTernal:INTerval
+rejected  TRIGger:INTernal:PERiod
+rejected  TRIGger:INTernal:TIMer
+rejected  TRIGger:SEQuence:INTerval
+rejected  TRIGger:SEQuence:PERiod
+rejected  TRIGger:SEQuence:TIMer
+rejected  TRIGger:SEQuence:TINTerval
+rejected  TRIGger:SEQuence:RATE
+rejected  TRIGger:SEQuence:DELay
+rejected  TRIGger:SEQuence:INTernal:INTerval
+rejected  TRIGger:SEQuence:INTernal:PERiod
+rejected  SOURce1:TRIGger:INTerval
+rejected  SOURce1:TRIGger:TIMer
+rejected  SOURce1:TRIGger:PERiod
+rejected  BURSt:INTernal:PERiod
+rejected  BURSt:INTerval
+rejected  BURSt:PERiod
+rejected  SOURce1:INTerval
+rejected  SOURce1:PERiod
+
+Accepted commands: none

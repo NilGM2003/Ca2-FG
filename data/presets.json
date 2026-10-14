@@ -1,0 +1,74 @@
+{
+  "PoC_1": {
+    "name": "PoC_1",
+    "freq_hz": 1500000.0,
+    "amplitude_vpp": 0.6,
+    "prf_hz": 10.0,
+    "duty_cycle_pct": 20.0,
+    "duration_s": 360.0,
+    "load": "50",
+    "channels": [
+      1
+    ]
+  },
+  "PoC_2": {
+    "name": "PoC_2",
+    "freq_hz": 1500000.0,
+    "amplitude_vpp": 2.0,
+    "prf_hz": 10.0,
+    "duty_cycle_pct": 20.0,
+    "duration_s": 360.0,
+    "load": "50",
+    "channels": [
+      1
+    ]
+  },
+  "PoC_3": {
+    "name": "PoC_3",
+    "freq_hz": 1500000.0,
+    "amplitude_vpp": 3.0,
+    "prf_hz": 10.0,
+    "duty_cycle_pct": 20.0,
+    "duration_s": 360.0,
+    "load": "50",
+    "channels": [
+      1
+    ]
+  },
+  "PoC_4": {
+    "name": "PoC_4",
+    "freq_hz": 1500000.0,
+    "amplitude_vpp": 5.5,
+    "prf_hz": 10.0,
+    "duty_cycle_pct": 20.0,
+    "duration_s": 360.0,
+    "load": "50",
+    "channels": [
+      1
+    ]
+  },
+  "Prova": {
+    "name": "Prova",
+    "freq_hz": 1500000.0,
+    "amplitude_vpp": 1.0,
+    "prf_hz": 10.0,
+    "duty_cycle_pct": 20.0,
+    "duration_s": 10.0,
+    "load": "50",
+    "channels": [
+      1
+    ]
+  },
+  "Prova 2": {
+    "name": "Prova 2",
+    "freq_hz": 1500000.0,
+    "amplitude_vpp": 1.0,
+    "prf_hz": 10.0,
+    "duty_cycle_pct": 20.0,
+    "duration_s": 60.0,
+    "load": "50",
+    "channels": [
+      1
+    ]
+  }
+}

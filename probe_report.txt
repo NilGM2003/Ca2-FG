@@ -1,0 +1,50 @@
+AFG1022 probe, 2026-10-08 12:46:05
+Resource: USB0::1689::851::2347497::0::INSTR
+*IDN?  ->  TEKTRONIX,AFG1022,2347497,SCPI:99.0 FV:V1.3.0
+
+--- commands (each followed by SYSTem:ERRor?) ---
+*CLS                                                    ok
+OUTPut1:STATe OFF                                       ok
+OUTPut2:STATe OFF                                       ok
+OUTPut1:IMPedance 50                                    ok
+OUTPut1:IMPedance INFinity                              ok
+OUTPut1:IMPedance 50                                    ok
+SOURce1:FUNCtion:SHAPe SINusoid                         ok
+SOURce1:FREQuency:FIXed 500000                          ok
+SOURce1:VOLTage:UNIT VPP                                REJECTED  -102,"Syntax error"
+SOURce1:VOLTage:LEVEL:IMMediate:AMPLitude 0.1           ok
+SOURce1:VOLTage:LEVel:IMMediate:OFFSet 0                ok
+SOURce1:BURSt:MODE TRIGgered                            ok
+SOURce1:BURSt:NCYCles 250                               ok
+SOURce1:BURSt:STATe ON                                  ok
+TRIGger:SEQuence:SOURce TIMer                           ok
+
+--- queries ---
+OUTPut1:IMPedance?                                      -> 50
+SOURce1:FUNCtion:SHAPe?                                 -> SIN
+SOURce1:FREQuency:FIXed?                                -> 5.000000e+05
+SOURce1:FREQuency?                                      -> 5.000000e+05
+SOURce1:VOLTage:LEVel:IMMediate:AMPLitude?              -> 1.000000e-01
+SOURce1:VOLTage:AMPLitude?                              -> 1.000000e-01
+SOURce1:BURSt:MODE?                                     -> TRIG
+SOURce1:BURSt:NCYCles?                                  -> 250
+SOURce1:BURSt:STATe?                                    -> 1
+TRIGger:SEQuence:SOURce?                                -> TIM,TIM,TIM,TIM
+OUTPut1:STATe?                                          -> 0
+
+--- burst period candidates (0.1 s) ---
+SOURce1:BURSt:INTernal:PERiod 0.1                       REJECTED  -102,"Syntax error"
+TRIGger:TIMer 0.1                                       REJECTED  -102,"Syntax error"
+SOURce1:BURSt:PERiod 0.1                                REJECTED  -102,"Syntax error"
+TRIGger:SEQuence:TIMer 0.1                              REJECTED  -102,"Syntax error"
+TRIGger:SEQuence:TIMer 100ms                            REJECTED  -102,"Syntax error"
+SOURce1:BURSt:TDELay 0.1                                REJECTED  -102,"Syntax error"
+SOURce1:BURSt:INTernal:PERiod?                          NO REPLY (VisaIOError: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.)
+TRIGger:TIMer?                                          NO REPLY (VisaIOError: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.)
+SOURce1:BURSt:PERiod?                                   NO REPLY (VisaIOError: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.)
+TRIGger:SEQuence:TIMer?                                 NO REPLY (VisaIOError: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.)
+SOURce1:BURSt:TDELay?                                   NO REPLY (VisaIOError: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.)
+SOURce1:BURSt:TRIGger:SOURce?                           NO REPLY (VisaIOError: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.)
+
+--- command list from the instrument (if supported) ---
+SYSTem:HELP:HEADers? not supported (VisaIOError: VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.)

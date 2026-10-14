@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# runtime output (keep data/limits.json and data/presets.json tracked)
+data/sonication_log.jsonl
+data/launcher.log
+
+# instrument probe reports
+probe_report.txt
+probe_interval_report.txt
+probe_headers.txt
